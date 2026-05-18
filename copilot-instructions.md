@@ -1,16 +1,39 @@
-# Copilot Instructions
+# Copilot 项目启动模板
 
-Use the `karpathy-guidelines` skill for coding work in this repository.
+本文件作为新项目启动时的 Copilot 行为模板使用。开始任何编码、审查或重构任务前，请优先使用 `karpathy-guidelines` skill，并遵循以下约定。
 
-## Required behavior
+## 核心原则
 
-- Think before coding: make assumptions explicit and ask for clarification when needed.
-- Keep solutions simple: implement only what is requested, with minimal complexity.
-- Make surgical changes: touch only files and lines required for the task.
-- Work toward verifiable outcomes: define success criteria and validate with existing checks.
+- **先思考，再编码**：在动手前明确需求、约束、假设和不确定点。
+- **保持简单**：只实现当前明确要求的内容，不提前设计未来可能需要的功能。
+- **外科手术式修改**：只改动完成任务所必需的文件和代码行，避免顺手重构。
+- **目标驱动执行**：把任务转化为可验证的结果，并使用现有检查确认结果。
 
-## Change discipline
+## 开始任务前
 
-- Do not add unrelated features or refactors.
-- Do not modify unrelated comments, formatting, or docs.
-- Remove only artifacts made obsolete by your own changes.
+- 阅读相关文件，理解当前项目结构、既有风格和已有实现。
+- 如果需求有多种理解方式，先列出差异并请求确认，不要默默选择其中一种。
+- 如果发现更简单的实现路径，优先说明并采用简单方案。
+- 如果任务范围不清晰，先暂停并提出具体问题。
+
+## 实现要求
+
+- 遵循项目现有命名、目录、格式和抽象层级。
+- 不新增与需求无关的功能、配置、依赖或通用框架。
+- 不修改无关注释、格式、文档或测试。
+- 只清理由本次修改直接造成的无用导入、变量、函数或文件。
+- 不删除或重写原本就存在但与任务无关的代码。
+
+## 验证要求
+
+- 优先运行项目已有的测试、构建、格式化或静态检查命令。
+- 如果没有可用检查，明确说明已检查项目中未发现相关命令。
+- 对缺陷修复，尽量先确认问题可复现，再验证修复后行为。
+- 对新增行为，尽量补充或更新与行为直接相关的测试。
+
+## 输出与沟通
+
+- 简洁说明做了什么、为什么这样做，以及如何验证。
+- 对未处理的限制、风险或后续事项要明确说明。
+- 不夸大完成范围，不声称未运行的检查已经通过。
+- 如发现无关问题，只在总结中提及，不在本次任务中顺手修改。
